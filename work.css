@@ -1,0 +1,204 @@
+*,*::after,::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ranade', sans-serif;
+}
+
+:root{
+    --clr-text: #E4FDE1;
+   
+    
+}
+
+
+.home-link{
+  grid-column: 1/3;
+  grid-row: 1/1;
+  padding: 2em 3em;
+  font-size: 2rem;  
+  text-transform: capitalize;
+  
+}
+
+.home-link a{
+    color: var(--clr-text);
+
+}
+
+.home-link a:hover{
+    font-style: italic;
+}
+.home-link a:active{
+    font-style: italic;
+}
+.works{
+    width: 100%;
+    height: 100vh;
+    background: rgb(0,0,0);
+    background: linear-gradient(160deg, rgba(0,0,0,1) 10%, rgba(9,9,9,1) 28%, rgba(0,22,37,1) 53%, rgba(1,40,50,1) 100%, rgba(27,58,75,1) 100%);
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(3,1fr);
+}
+
+.works-content{
+    grid-column: 2/4;
+    grid-row: 2/4;
+}
+
+
+.works-content h2{
+    color: var(--clr-text);
+    text-shadow: 0.05em 0 0  rgba(0, 205, 0, 0.4),
+    -0.025em -0.05em 0  rgba(255, 0, 0, 0.7),
+    0.015em 0.015em 0  rgba(0, 0, 175, 0.5);
+    font-size: 7rem;
+    text-transform: uppercase;
+    font-family: var(--h1-fs);
+    user-select: none;
+    color: var(--clr-text);
+    font-family: 'Bespoke Stencil', sans-serif;
+    animation: glitch 500ms infinite ;
+}
+
+.works-content p::selection{
+    background-color: var(--clr-text);
+    color: #002329;
+}
+.works-content p{
+    font-size: 2rem;
+    width: 80%;
+    color: var(--clr-text);
+}
+
+.work-showcase{
+    flex: 1;
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+    grid-column: 4/-1;
+    grid-row: 2/4;
+}
+
+.work-link a{
+    color: var(--clr-text);
+    text-transform: capitalize;
+    font-size: 2rem;
+    margin-top: 2rem;
+  
+    
+}
+
+
+
+.work-link a:hover{
+    font-style: italic;
+}
+
+.work-link a:active{
+    font-style: italic;
+}
+
+.work-link h3::selection{
+    background-color: var(--clr-text);
+    color: #002329;
+}
+
+/* animations */
+
+
+@keyframes glitch {
+    0%{
+        text-shadow: 0.05em 0.005em 0  rgba(0, 205, 0, 0.4),
+    -0.025em -0.05em 0  rgba(255, 0, 0, 0.7),
+    0.015em 0.015em 0  rgba(0, 0, 175, 0.5); 
+    }
+    14%{
+        text-shadow: 0.05em 0.005em 0  rgba(0, 205, 0, 0.4),
+    -0.0125em -0.015em 0  rgba(255, 0, 0, 0.7),
+    0.015em 0.015em 0  rgba(0, 0, 175, 0.9); 
+    }
+    15%{
+        text-shadow: -0.025em -0.015em 0  rgba(0, 205, 0, 0.4),
+    0.0125em 0.015em 0  rgba(255, 0, 0, 0.7),
+    -0.015em -0.015em 0  rgba(0, 0, 1759 0.5); 
+    }
+    49%{
+        text-shadow: -0.025em -0.015em 0  rgba(0, 205, 0, 0.4),
+    0.0125em 0.015em 0  rgba(255, 0, 0, 0.7),
+    -0.015em -0.015em 0  rgba(0, 0, 175, 0.5); 
+    }
+    50%{
+        text-shadow: 0.05em -0.025em 0  rgba(0, 205, 0, 0.4),
+    -0.0125em -0.015em 0  rgba(255, 0, 0, 0.7),
+    0.0125em 0.0015em 0  rgba(0, 0, 175, 0.5); 
+    }
+    99%{
+        text-shadow: 0.05em -0.025em 0  rgba(0, 205, 0, 0.4),
+    -0.0125em -0.015em 0  rgba(255, 0, 0, 0.7),
+    0.0125em 0.0015em 0  rgba(0, 0, 175, 0.5); 
+    }
+    100%{
+        text-shadow: -0.05em -0.0025em 0  rgba(0, 205, 0, 0.4),
+    0.025em 0.015em 0  rgba(255, 0, 0, 0.7),
+    -0.025em -0.015em 0  rgba(0, 0, 175, 0.5); 
+    }
+}
+
+/* media queries */
+
+@media only screen and (max-width: 1150px){
+    .works-content{
+        grid-column: 1/4;
+        padding-left: 7rem;
+        margin-top: 2rem;
+    }
+
+    .works-content p{
+        width: 90%;
+        font-size: 1.5rem;
+    }
+
+    .works-content h2{
+        font-size: 5rem;
+    }
+    .work-showcase{
+        margin-top: 2rem;
+    }
+    .work-link a{
+        font-size: 1.5rem;
+        
+    }
+}
+
+@media only screen and (max-width: 800px){
+    .works{
+        display: flex;
+        /* height: fit-content; */
+        padding: 2rem 2rem;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        text-align: center;
+    }
+
+    .works-content{
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
+       margin-top: 2rem;
+    }
+
+    .works-content p{
+        width: 80%;
+    }
+
+    .home-link{
+        padding: 1rem;
+    }
+}
