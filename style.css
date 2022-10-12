@@ -111,6 +111,13 @@
 
 /* media queries */
 
+@media only screen and (max-width: 1650px){
+    .links{
+        grid-row: 1/ 4;
+        grid-column: 2/ 5;
+    }
+}
+
 @media only screen and (max-width: 1200px){
     .hero-heading{
         margin-bottom: 2rem;
